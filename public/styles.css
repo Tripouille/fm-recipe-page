@@ -1,5 +1,35 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit-fallback";
+  src: local(Arial);
+  ascent-override: 100.55%;
+  descent-override: 26.14%;
+  line-gap-override: 0%;
+  size-adjust: 99.45%;
+}
+
+@font-face {
+  font-family: "YoungSerif";
+  src: url("fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YoungSerif-fallback";
+  src: local(Arial);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Outfit", "Outfit-fallback";
 }
