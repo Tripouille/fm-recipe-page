@@ -31,17 +31,148 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Outfit", "Outfit-fallback";
 }
 
 :root {
-  --clr-primary-nutmeg: hsl(14, 45%, 36%);
+  --clr-primary-brandy-red: hsl(14, 45%, 36%);
   --clr-primary-dark-raspberry: hsl(332, 51%, 32%);
 
   --clr-neutral-white: hsl(0, 0%, 100%);
   --clr-neutral-rose-white: hsl(330, 100%, 98%);
   --clr-neutral-eggshell: hsl(30, 54%, 90%);
-  --clr-neutral-light-grey: hsl(30, 18%, 87%);
+  --clr-neutral-white-coffee: hsl(30, 18%, 87%);
   --clr-neutral-wenge-brown: hsl(30, 10%, 34%);
   --clr-neutral-dark-charcoal: hsl(24, 5%, 18%);
+}
+
+ul,
+ol {
+  padding-left: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+li {
+  padding-left: 0.8rem;
+}
+
+li::marker {
+  color: var(--clr-primary-dark-raspberry);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.heading-l {
+  font-family: "YoungSerif", "YoungSerif-fallback";
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.heading-m {
+  font-family: "YoungSerif", "YoungSerif-fallback";
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--clr-primary-brandy-red);
+}
+
+.heading-s {
+  font-family: "Outfit", "Outfit-fallback";
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.body {
+  font-family: "Outfit", "Outfit-fallback";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.background {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-neutral-eggshell);
+}
+
+.recipe {
+  margin-top: 2rem;
+  width: min(46rem, 100%);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  background-color: var(--clr-neutral-white);
+}
+
+.recipe__image {
+  border-radius: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.recipe__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--clr-neutral-wenge-brown);
+}
+
+.recipe__body__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recipe__body__header h1 {
+  color: var(--clr-neutral-dark-charcoal);
+}
+
+.recipe__body__preparation--time {
+  padding: 1.75rem;
+}
+
+.recipe__body__preparation--time h2 {
+  color: var(--clr-primary-dark-raspberry);
+  margin-bottom: 1rem;
+}
+
+.recipe__body__ingredients h2 {
+  margin-bottom: 1.5rem;
+}
+
+.recipe__body__instructions h2 {
+  margin-bottom: 1.5rem;
+}
+
+.recipe__body__separator {
+  height: 0;
+  border: 0;
+  border-top: 1px solid var(--clr-neutral-white-coffee);
+}
+
+.recipe__body__nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recipe__body__nutrition tr {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 2rem;
+}
+
+.recipe__body__nutrition tr td {
+  flex: 0 1 50%;
+}
+
+.recipe__body__nutrition tr td:nth-child(2) {
+  font-weight: 700;
+  color: var(--clr-primary-brandy-red);
+}
+
+.recipe__body__nutrition tr:not(:first-child) {
+  border-top: 1px solid var(--clr-neutral-white-coffee);
 }
